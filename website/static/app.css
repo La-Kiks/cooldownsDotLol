@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
+
+/* CSS styles for the body */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 30px;
+  background: #1d2b3a;
+  color: #00dfc4;
+}
+
+/* CSS styles for the header */
+h1 {
+  text-align: center;
+  color: #00dfc4;
+}
+
+/* CSS styles for the table */
+.dataframe.table-style {
+  position: static;
+  border-collapse: collapse;
+  margin-left: 200px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Classes for images */
+.cdn-img {
+  width: 42px;
+  height: 42px;
+  padding: 1px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Apply styles to table cells */
+.dataframe.table-style th,
+.dataframe.table-style td {
+  border: 1px solid rgb(0, 214, 214);
+  text-align: center;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+  padding: 1px;
+  font-size: 1.1em;
+}
+
+/* Alternate row colors */
+.dataframe.table-style tr:nth-child(even) {
+  background-color: #233547;
+}
+
+.dataframe.table-style tr:nth-child(odd) {
+  background-color: #2f475f;
+}
+
+/* Hover effect for rows */
+.dataframe.table-style tr:hover {
+  background-color: #1d2b3a;
+}
+
+/* Styling for header cells */
+.dataframe.table-style th {
+  background-color: #283b4e;
+  color: #00dfc4;
+  display: none;
+}
+
+/* Container for Haste box + table display */
+.container {
+  display: flex;
+}
+
+/* CSS for my HASTE box */
+.inputBox {
+  position: fixed;
+  top: 50%; /* Adjust as needed */
+  transform: translateY(-50%);
+  left: 20px;
+  width: 125px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 10px;
+  bottom: -3px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-35px);
+  font-size: 0.65em;
+  padding: 0 15px;
+  background-color: #1d2b3a;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.5em;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 1px solid #00dfc4;
+}
+
+/* Hide spinner arrows for number input */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Optional - Some browsers require this property */
+}
+
+.no-spinner {
+  -moz-appearance: textfield; /* Firefox */
+}
