@@ -129,14 +129,13 @@ def champ_dataframe():
     nidalee_sf = dict(zip(header_lst, nidalee_c_s))
 
     # add the new rows to the data frame
-    elise_idx = df[df['Name'] == 'Elise'].index[0] + 1
-    df.loc[elise_idx] = elise_sf
+    """elise_idx = df[df['Name'] == 'Elise'].index[0] + 1
+    df.loc[elise_idx] = elise_sf"""
+    df.loc[len(df)] = elise_sf
 
-    jayce_idx = df[df['Name'] == 'Jayce'].index[0] + 1
-    df.loc[jayce_idx] = jayce_sf
+    df.loc[len(df)] = jayce_sf
 
-    nida_idx = df[df['Name'] == 'Nidalee'].index[0] + 1
-    df.loc[nida_idx] = nidalee_sf
+    df.loc[len(df)] = nidalee_sf
 
     # here we add the specific spells exceptions that are lost in json
     col_q = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']
