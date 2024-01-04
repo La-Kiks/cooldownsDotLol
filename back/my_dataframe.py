@@ -51,23 +51,23 @@ def champ_dataframe():
     # Function to generate image URL based on 'Name'
     def generate_name_img(name):
         return f"<img src='https://cdn.communitydragon.org/{patch_num}/champion/{name}/square.png' " \
-               f"class='cdn-img' loading='lazy'>"
+               f"alt='image of a champion' class='cdn-img' loading='lazy'>"
 
     def generate_q_spell_img(name):
         return f"<img src='https://cdn.communitydragon.org/{patch_num}/champion/{name}/ability-icon/q' " \
-               f"class='cdn-img' loading='lazy'>"
+               f"alt='image of a spell' class='cdn-img' loading='lazy'>"
 
     def generate_w_spell_img(name):
         return f"<img src='https://cdn.communitydragon.org/{patch_num}/champion/{name}/ability-icon/w' " \
-               f"class='cdn-img' loading='lazy'>"
+               f"alt='image of a spell' class='cdn-img' loading='lazy'>"
 
     def generate_e_spell_img(name):
         return f"<img src='https://cdn.communitydragon.org/{patch_num}/champion/{name}/ability-icon/e' " \
-               f"class='cdn-img' loading='lazy'>"
+               f"alt='image of a spell' class='cdn-img' loading='lazy'>"
 
     def generate_r_spell_img(name):
         return f"<img src='https://cdn.communitydragon.org/{patch_num}/champion/{name}/ability-icon/r' " \
-               f"class='cdn-img' loading='lazy'>"
+               f"alt='image of a spell' class='cdn-img' loading='lazy'>"
 
     # Apply the function to populate the specific columns
     df['ci'] = df['Name'].apply(generate_name_img)
@@ -85,45 +85,49 @@ def champ_dataframe():
     # elise spider form building
     elise_path_ico = "https://raw.communitydragon.org/latest/game/assets/characters/elise/hud/elise_circle.png"
     elise_path_s = "https://raw.communitydragon.org/pbe/game/assets/characters/elise/hud/icons2d/elise"
-    elise_spider_spells = [f"<img src='{elise_path_ico}' width='40'>",
+    elise_spider_spells = [f"<img src='{elise_path_ico}' alt='image of a champion' width='40'>",
                            'Elise Spider',
-                           f"<img src='{elise_path_s}spiderq.png' class='cdn-img' loading='lazy'>",
+                           f"<img src='{elise_path_s}spiderq.png' alt='image of spell' class='cdn-img' loading='lazy'>",
                            6, 6, 6, 6, 6, 6,
-                           f"<img src='{elise_path_s}spiderw.png' class='cdn-img' loading='lazy'>",
+                           f"<img src='{elise_path_s}spiderw.png' alt='image of spell' class='cdn-img' loading='lazy'>",
                            10, 10, 10, 10, 10, 10,
-                           f"<img src='{elise_path_s}spidere.png' class='cdn-img' loading='lazy'>",
+                           f"<img src='{elise_path_s}spidere.png' alt='image of spell' class='cdn-img' loading='lazy'>",
                            22, 21, 20, 19, 18, 18,
-                           f"<img src='{elise_path_s}r.png' class='cdn-img' loading='lazy'",
+                           f"<img src='{elise_path_s}r.png' alt='image of spell' class='cdn-img' loading='lazy'>",
                            4, 4, 4, 4, 4, 4]
     elise_sf = dict(zip(header_lst, elise_spider_spells))
 
     # jayce cannon form building
     jayce_path_ico = "https://raw.communitydragon.org/latest/game/assets/characters/jayce/hud/jayce_circle.png"
     jayce_path_s = "https://raw.communitydragon.org/latest/game/assets/characters/jayce/hud/icons2d/jayce"
-    jayce_c_s = [f"<img src='{jayce_path_ico}' width='40'>",
+    jayce_c_s = [f"<img src='{jayce_path_ico}' alt='image of a champion' width='40'>",
                  'Jayce Cannon',
-                 f"<img src='{jayce_path_s}q_ranged.jaycenewicons.png' class='cdn-img' loading='lazy'>",
+                 f"<img src='{jayce_path_s}q_ranged.jaycenewicons.png' alt='image of a spell' class='cdn-img' "
+                 f"loading='lazy'>",
                  8, 8, 8, 8, 8, 8,
-                 f"<img src='{jayce_path_s}w_ranged.jaycenewicons.png' class='cdn-img' loading='lazy'>",
+                 f"<img src='{jayce_path_s}w_ranged.jaycenewicons.png' alt='image of a spell' class='cdn-img' "
+                 f"loading='lazy'>",
                  13, 11.4, 9.8, 8.2, 6.6, 5,
-                 f"<img src='{jayce_path_s}e_ranged.jaycenewicons.png' class='cdn-img' loading='lazy'>",
+                 f"<img src='{jayce_path_s}e_ranged.jaycenewicons.png' alt='image of a spell' class='cdn-img' "
+                 f"loading='lazy'>",
                  16, 16, 16, 16, 16, 16,
-                 f"<img src='{jayce_path_s}r_melee.jaycenewicons.png' class='cdn-img' loading='lazy'>",
+                 f"<img src='{jayce_path_s}r_melee.jaycenewicons.png' alt='image of a spell' class='cdn-img' "
+                 f"loading='lazy'>",
                  6, 6, 6, 6, 6, 6]
     jayce_sf = dict(zip(header_lst, jayce_c_s))
 
     # nidalee cougar form building
     nidalee_path_ico = "https://raw.communitydragon.org/latest/game/assets/characters/nidalee/hud/nidalee_circle.png"
     nidalee_path_s = "https://raw.communitydragon.org/latest/game/assets/characters/nidalee/hud/icons2d/nidalee_"
-    nidalee_c_s = [f"<img src='{nidalee_path_ico}' class='cdn-img'>",
+    nidalee_c_s = [f"<img src='{nidalee_path_ico}' alt='image of a champion' class='cdn-img'>",
                    'Nidalee Cougar',
-                   f"<img src='{nidalee_path_s}q2.png' class='cdn-img' loading='lazy'>",
+                   f"<img src='{nidalee_path_s}q2.png' alt='image of a spell' class='cdn-img' loading='lazy'>",
                    6, 6, 6, 6, 6, 6,
-                   f"<img src='{nidalee_path_s}w2.png' class='cdn-img' loading='lazy'>",
+                   f"<img src='{nidalee_path_s}w2.png' alt='image of a spell' class='cdn-img' loading='lazy'>",
                    6, 6, 6, 6, 6, 6,
-                   f"<img src='{nidalee_path_s}e2.png' class='cdn-img' loading='lazy'>",
+                   f"<img src='{nidalee_path_s}e2.png' alt='image of a spell' class='cdn-img' loading='lazy'>",
                    6, 6, 6, 6, 6, 6,
-                   f"<img src='{nidalee_path_s}r2.png' class='cdn-img' loading='lazy'>",
+                   f"<img src='{nidalee_path_s}r2.png' alt='image of a spell' class='cdn-img' loading='lazy'>",
                    3, 3, 3, 3, 3, 3]
 
     nidalee_sf = dict(zip(header_lst, nidalee_c_s))
