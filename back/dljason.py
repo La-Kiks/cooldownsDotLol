@@ -1,10 +1,9 @@
 import os
 import requests
 import json
-last_updated = '13.22.1'
+last_updated = '14.1.1'
 current_directory = os.path.dirname(os.path.abspath(__file__))
 jason_dir = os.path.join(current_directory, 'jasons')
-
 
 def update_patch():
     url_version = 'https://ddragon.leagueoflegends.com/api/versions.json'
@@ -23,7 +22,6 @@ def update_patch():
         file.close()
     return live_patch
 
-
 def flatten_json(json_data, prefix=''):
     flattened = {}
     for (key, value) in json_data.items():
@@ -32,10 +30,7 @@ def flatten_json(json_data, prefix=''):
         else:
             flattened[prefix + key] = value
     return flattened
-
-
 patch_num = update_patch()
-
 
 def champ_lst():
     url_version = f'https://ddragon.leagueoflegends.com/cdn/{patch_num}/data/en_US/champion.json'
@@ -55,7 +50,6 @@ def champ_lst():
         file.close()
     return chp_lst
 
-
 def champ_id_lst():
     with open(jason_dir + 'champion.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
@@ -63,10 +57,7 @@ def champ_id_lst():
         id_lst = [flattened_json[key] for key in flattened_json if key.endswith('.key')]
         file.close()
     return id_lst
-
-
 champions_list = champ_lst()
-
 
 def dl_champ_json():
     for champ_name in champions_list:
