@@ -83,9 +83,9 @@ def champ_dataframe():
     #                'ei', 'e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'ri', 'r1', 'r2', 'r3', 'r4', 'r5', 'r6']
 
     # elise spider form building
-    elise_path_ico = "https://raw.communitydragon.org/latest/game/assets/characters/elise/hud/elise_circle.png"
+    elise_path_ico = "https://raw.communitydragon.org/latest/game/assets/characters/elise/hud/elise_square.png"
     elise_path_s = "https://raw.communitydragon.org/pbe/game/assets/characters/elise/hud/icons2d/elise"
-    elise_spider_spells = [f"<img src='{elise_path_ico}' alt='image of a champion' width='40'>",
+    elise_spider_spells = [f"<img src='{elise_path_ico}' alt='image of a champion' class='cdn-img'>",
                            'Elise Spider',
                            f"<img src='{elise_path_s}spiderq.png' alt='image of spell' class='cdn-img' loading='lazy'>",
                            6, 6, 6, 6, 6, 6,
@@ -98,26 +98,26 @@ def champ_dataframe():
     elise_sf = dict(zip(header_lst, elise_spider_spells))
 
     # jayce cannon form building
-    jayce_path_ico = "https://raw.communitydragon.org/latest/game/assets/characters/jayce/hud/jayce_circle.png"
+    jayce_path_ico = "https://raw.communitydragon.org/latest/game/assets/characters/jayce/hud/jayce_square.png"
     jayce_path_s = "https://raw.communitydragon.org/latest/game/assets/characters/jayce/hud/icons2d/jayce"
-    jayce_c_s = [f"<img src='{jayce_path_ico}' alt='image of a champion' width='40'>",
+    jayce_c_s = [f"<img src='{jayce_path_ico}' alt='image of a champion' class='cdn-img'>",
                  'Jayce Cannon',
-                 f"<img src='{jayce_path_s}q_ranged.jaycenewicons.png' alt='image of a spell' class='cdn-img' "
+                 f"<img src='{jayce_path_s}q_ranged.png' alt='image of a spell' class='cdn-img' "
                  f"loading='lazy'>",
                  8, 8, 8, 8, 8, 8,
-                 f"<img src='{jayce_path_s}w_ranged.jaycenewicons.png' alt='image of a spell' class='cdn-img' "
+                 f"<img src='{jayce_path_s}w_ranged.png' alt='image of a spell' class='cdn-img' "
                  f"loading='lazy'>",
                  13, 11.4, 9.8, 8.2, 6.6, 5,
-                 f"<img src='{jayce_path_s}e_ranged.jaycenewicons.png' alt='image of a spell' class='cdn-img' "
+                 f"<img src='{jayce_path_s}e_ranged.png' alt='image of a spell' class='cdn-img' "
                  f"loading='lazy'>",
                  16, 16, 16, 16, 16, 16,
-                 f"<img src='{jayce_path_s}r_melee.jaycenewicons.png' alt='image of a spell' class='cdn-img' "
+                 f"<img src='{jayce_path_s}r_melee.png' alt='image of a spell' class='cdn-img' "
                  f"loading='lazy'>",
                  6, 6, 6, 6, 6, 6]
     jayce_sf = dict(zip(header_lst, jayce_c_s))
 
     # nidalee cougar form building
-    nidalee_path_ico = "https://raw.communitydragon.org/latest/game/assets/characters/nidalee/hud/nidalee_circle.png"
+    nidalee_path_ico = "https://raw.communitydragon.org/latest/game/assets/characters/nidalee/hud/nidalee_square.png"
     nidalee_path_s = "https://raw.communitydragon.org/latest/game/assets/characters/nidalee/hud/icons2d/nidalee_"
     nidalee_c_s = [f"<img src='{nidalee_path_ico}' alt='image of a champion' class='cdn-img'>",
                    'Nidalee Cougar',
