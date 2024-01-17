@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>cooldowns.lol</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <link rel="stylesheet" href="../static/app.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Andika&display=swap"
       rel="stylesheet"
-    >
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    />
+
     <link
       rel="icon"
       type="image/png"
       href="../static/img/favicon-32x32.png"
       sizes="32x32"
-    >
+    />
     <link
       rel="icon"
       type="image/png"
       href="../static/img/favicon-16x16.png"
       sizes="16x16"
-    >
-    <link rel="icon" type="image/x-icon" href="../templates/favicon.ico">
+    />
+    <link rel="icon" type="image/x-icon" href="../templates/favicon.ico" />
   </head>
   <body>
-    <h1>COOLDOWNS.LOL</h1>
+    <header class="header">
+      <h1>COOLDOWNS.LOL</h1>
+    </header>
 
-    <div class="container">
-      {% if show_form %}
+
+    <div class="sideAndTableContainer">
+        {% if show_form %}
       <!-- Form to input haste -->
-      <div class="inputBox">
-        <form id="hasteForm" method="post">
-          <input
-            type="number"
-            step="1"
-            name="haste"
-            class="no-spinner"
-            id="haste"
-            value="{{ haste_value }}"
-            required="required"
-          >
-          <span> Haste </span>
-        </form>
+      <div class="inputsContainer">
+        <div class="sideInputBox base__box">
+          <form id="search-form" method="post">
+            <input type="text" id="search-box" oninput="search(); updateSearch();" required />
+            <span class="spanChamp"> Champion </span>
+          </form>
+          <form id="hasteForm" method="post">
+            <input
+              type="number"
+              step="1"
+              name="haste"
+              class="no-spinner"
+              id="haste"
+              value="{{ haste_value }}"
+              required="required"
+            />
+            <span> Haste </span>
+          </form>
+        </div>
       </div>
-
-      {% endif %}
-      <div id="tableContainer">
-        <!-- Display the DataFrame HTML -->
+        {% endif %}
+      <!-- Display the DataFrame HTML -->
         {{ dataframe|safe }}
-      </div>
     </div>
-    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="../static/app.js"></script>
+    <footer class="footer">Provided by La-Kiks ©</footer>
   </body>
 </html>
