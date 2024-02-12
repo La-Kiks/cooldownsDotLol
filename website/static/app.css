@@ -353,11 +353,19 @@ template {
 /* My CSS
   ================================================================================ */
 
+html {
+  --my-bg-color: #0a1428; /*before #1d2b3a;*/
+  --my-blue5: rgb(20, 40, 80);
+  --my-blue4: rgb(25, 50, 100);
+  --basic-txt-color: #c8aa6e; /*Lol light blue : 0ac8b9 and before #00dfc4;*/
+  --my-gold4: #c89b3c;
+}
+
 /* CSS styles for the body */
 body {
   font-family: "Poppins", sans-serif;
-  background: #1d2b3a;
-  color: #00dfc4;
+  background: var(--my-bg-color);
+  color: var(--basic-txt-color);
   box-sizing: border-box;
   max-width: 1920px;
 }
@@ -365,7 +373,7 @@ body {
 /* CSS styles for the header */
 h1 {
   text-align: center;
-  color: #00dfc4;
+  color: var(--my-gold4);
 }
 
 /* CSS for navigator */
@@ -383,12 +391,12 @@ nav a {
   margin-left: 50px;
   font-size: 1.4em;
   text-decoration: none;
-  color: #00dfc4;
+  color: var(--basic-txt-color);
 }
 
 nav a:hover {
   text-decoration: none;
-  color: #fff;
+  color: #cdfafa;
 }
 
 /* Container for side bar + table */
@@ -426,11 +434,11 @@ nav a:hover {
   align-self: flex-start;
   width: 80%;
   padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: #1d2b3a;
+  border: 1px solid #5b5a56;
+  background: var(--my-bg-color);
   border-radius: 5px;
   outline: none;
-  color: #fff;
+  color: #f0e6d2;
   font-size: 1em;
   transition: 0.5s;
 }
@@ -442,7 +450,7 @@ nav a:hover {
   pointer-events: none;
   transform: translateX(5px) translateY(-31px);
   font-size: 1em;
-  color: rgba(255, 255, 255, 0.25);
+  color: #5b5a56;
   text-transform: uppercase;
   transition: 0.5s;
 }
@@ -450,20 +458,20 @@ nav a:hover {
 .sideInputBox input:valid ~ span,
 .sideInputBox input:focus ~ span {
   justify-content: center;
-  color: #00dfc4;
+  color: var(--my-gold4);
   max-width: 50%;
   transform: translateX(15px) translateY(-46px);
   font-size: 0.65em;
   padding: 0 10px;
-  background-color: #1d2b3a;
-  border-left: 1px solid #00dfc4;
-  border-right: 1px solid #00dfc4;
+  background-color: var(--my-bg-color);
+  border-left: 1px solid var(--my-gold4);
+  border-right: 1px solid var(--my-gold4);
   letter-spacing: 0.3em;
 }
 
 .sideInputBox input:valid,
 .sideInputBox input:focus {
-  border: 1px solid #00dfc4;
+  border: 1px solid var(--my-gold4);
 }
 
 /* Hide spinner arrows for number input */
@@ -496,13 +504,14 @@ table img {
   width: 50px;
   height: 50px;
   vertical-align: middle;
-  border: 1px solid #00dfc4;
+  border: 0px solid var(--my-gold4);
+  padding: 1px;
 }
 
 /* Apply styles to table cells */
 .dataframe.table-style th,
 .dataframe.table-style td {
-  border: 1px solid rgb(0, 214, 214);
+  border: 1px solid var(--my-gold4);
   padding: 1px;
   font-size: 18px;
   width: 50px;
@@ -510,29 +519,31 @@ table img {
 
 /* Alternate row colors */
 .dataframe.table-style tr:nth-child(even) {
-  background-color: #233547;
+  background-color: var(--my-blue4);
 }
 
 .dataframe.table-style tr:nth-child(odd) {
-  background-color: #2f475f;
+  background-color: var(--my-blue5);
 }
 
 /* Hover effect for rows */
 .dataframe.table-style tr:hover {
-  background-color: #1d2b3a;
+  background-color: var(--my-bg-color);
+  transition: 0.33s;
 }
 
 /* Styling for header cells */
 .dataframe.table-style th {
-  background-color: #283b4e;
-  color: #00dfc4;
+  background-color: var(--my-bg-color);
+  color: var(--my-gold4);
   display: none;
 }
 
 .footer {
   display: flex;
-  justify-content: flex-end;
+  padding: 20px;
+  justify-content: center;
+  align-items: flex-end;
   clear: both;
   font-size: 0.75em;
-  margin-right: 5%;
 }
