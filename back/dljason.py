@@ -61,7 +61,7 @@ champions_list = champ_lst()
 
 def dl_champ_json():
     for champ_name in champions_list:
-        url_cdn = f'https://cdn.communitydragon.org/{patch_num}/champion/{champ_name}/data'
+        url_cdn = f'https://cdn.communitydragon.org/latest/champion/{champ_name}/data'
         response = requests.get(url_cdn)
         if response.status_code == 200:
             file_path = os.path.join(jason_dir, f'{champ_name}.json')

@@ -50,23 +50,23 @@ def champ_dataframe():
 
     # Function to generate image URL based on 'Name'
     def generate_name_img(name):
-        return f"<img src='https://cdn.communitydragon.org/{patch_num}/champion/{name}/square.png' " \
+        return f"<img src='https://cdn.communitydragon.org/latest/champion/{name}/square.png' " \
                f"alt='image of a champion' class='cdn-img' loading='lazy'>"
 
     def generate_q_spell_img(name):
-        return f"<img src='https://cdn.communitydragon.org/{patch_num}/champion/{name}/ability-icon/q' " \
+        return f"<img src='https://cdn.communitydragon.org/latest/champion/{name}/ability-icon/q' " \
                f"alt='image of a spell' class='cdn-img' loading='lazy'>"
 
     def generate_w_spell_img(name):
-        return f"<img src='https://cdn.communitydragon.org/{patch_num}/champion/{name}/ability-icon/w' " \
+        return f"<img src='https://cdn.communitydragon.org/latest/champion/{name}/ability-icon/w' " \
                f"alt='image of a spell' class='cdn-img' loading='lazy'>"
 
     def generate_e_spell_img(name):
-        return f"<img src='https://cdn.communitydragon.org/{patch_num}/champion/{name}/ability-icon/e' " \
+        return f"<img src='https://cdn.communitydragon.org/latest/champion/{name}/ability-icon/e' " \
                f"alt='image of a spell' class='cdn-img' loading='lazy'>"
 
     def generate_r_spell_img(name):
-        return f"<img src='https://cdn.communitydragon.org/{patch_num}/champion/{name}/ability-icon/r' " \
+        return f"<img src='https://cdn.communitydragon.org/latest/champion/{name}/ability-icon/r' " \
                f"alt='image of a spell' class='cdn-img' loading='lazy'>"
 
     # Apply the function to populate the specific columns
